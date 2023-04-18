@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* 960px未満になったらメディアクエリ内のスタイルが適用 */
+.q1-box {
+width: 400px;
+height: 400px;
+margin: 0 auto;
+}
+
+.q1-box,.q2-box,.q4-red_box,.q5-red_box,.q7-red_box {
+background: #ff0000;
+}
+.q3-blue_box,.q4-blue_box,.q5-blue_box,.q7-blue_box {
+background: #0008ff;
+}
+.q6-green_box,.q7-green_box{
+background: #00ff51;
+}
+.q6-yellow_box{
+background: #d4ff00;
+}
+.q6-pink_box{
+background: #ff00e1;
+}
+.q5-orange_box {
+background: #ff8400;
+}
+
+.q2-box,.q3-blue_box,.q3-green_box ,.q4-red_box,.q4-blue_box,.q5-red_box,.q5-blue_box,.q5-orange_box,.q6-green_box,.q6-yellow_box,.q6-pink_box,.q7-blue_box,.q7-red_box,.q7-green_box{
+width: 300px;
+height: 300px;
+flex-shrink: 0;
+}
+
+.q2-box {
+margin: 0 auto;
+}
+
+.q3-container {
+display: flex;
+justify-content: center;
+}
+.q3-green_box {
+background: #22ff00;
+margin-left: 150px;
+}
+
+.q4-container {
+width: 600px;
+margin: 0 auto;
+}
+.q4-container::after {
+content:'';
+display: block;
+clear:both;
+}
+
+.q4-red_box,.q4-blue_box {
+float: left;
+}
+
+.q5-container,.q6-container,.q7-container{
+display: flex;
+justify-content: center;
+}
+.q5-red_box,.q5-blue_box,.q5-orange_box,.q6-green_box,.q6-yellow_box,.q6-pink_box,.q7-blue_box{
+position: relative;
+}
+
+p {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.q7-red_box {
+position: absolute;
+top: 0;
+}
+
+@media screen and (max-width:959px)  {
+  .q1-box {
+  width: 200px;
+  height: 200px;
+  }
+  .q2-box {
+  background: #007bff;
+  }
+  .q3-green_box {
+  margin-left: 50px;
+  }
+  .q4-red_box , .q4-blue_box{
+  float: none;
+  }
+  .q5-container {
+  flex-direction: row-reverse;
+  }
+  .q6-green_box,.q6-yellow_box{
+  order: 1;
+  }
+  .q7-red_box {
+  display: none;
+  }
+}
